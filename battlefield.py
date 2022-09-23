@@ -2,7 +2,7 @@
 from dinosaur import Dinosaur
 from robot import Robot
 
-random_select = [{Robot}, {Dinosaur}] 
+random_select = [{robot}, {dinosaur}] 
 
 class Battlefield: 
     def __init__(self):
@@ -25,11 +25,11 @@ class Battlefield:
     def battle_phase(self):
         self.random_select(Robot, Dinosaur)
         
-        if Robot:
+        if Robot == True: 
             return self.robot.attack - self.dinosaur.health 
         self.robot.attack()
         
-        if Dinosaur:
+        if Dinosaur == True: 
             return self.dinosaur.attack - self.robot.health 
         self.dinosaur.attack()
         
