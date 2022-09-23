@@ -1,8 +1,8 @@
-from random import random
+
 from dinosaur import Dinosaur
 from robot import Robot
 
- 
+random_select = [{Robot}, {Dinosaur}] 
 
 class Battlefield: 
     def __init__(self):
@@ -23,15 +23,20 @@ class Battlefield:
         print("Welcome to the epic battle between Rosey and T Rex!")
 
     def battle_phase(self):
-        self.robot.attack()
-        self.dinosaur.attack()
         self.random_select(Robot, Dinosaur)
-
+        
         if Robot:
             return self.robot.attack - self.dinosaur.health 
-
-        elif Dinosaur:
+        self.robot.attack()
+        
+        if Dinosaur:
             return self.dinosaur.attack - self.robot.health 
+        self.dinosaur.attack()
+        
+
+        
+
+       
         
 
 
