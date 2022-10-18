@@ -1,7 +1,7 @@
-from battlefield import Battlefield
+from Battlefield import Battlefield
 
 bf = Battlefield() 
 bf.run()
-bf.battle_phase()
+
 
 
